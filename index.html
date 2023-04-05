@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Tip Calculator</h1>
+    <input type="text" placeholder="Enter Your Bill Amount" value="100" class="inp">
+    <button class="tip-button">Calculate Tip</button>
+    <p class="Output"></p>
+
+  <script>
+    let input_box = document.querySelector(".inp")
+    let tip_button = document.querySelector(".tip-button")
+    let ans = document.querySelector(".output")
+
+
+    tip_button.addEventListener("click", calculateTip)
+
+    function calculateTip(){
+        // console.log("Button is clicked")
+        let amount = input_box.value;
+        let tip = amount*2/100;
+        ans.innerHTML = "Your tip is " + tip;
+    }
+  </script>
+</body>
+</html>
